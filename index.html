@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Caluculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js" integrity="sha512-L0Shl7nXXzIlBSUUPpxrokqq4ojqgZFQczTYlGjzONGTDAcLremjwaWv5A+EDLnxhQzY5xUZPWLOLqYRkY0Cbw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="calculator.js"></script>
+    <script src="utils.js"></script>
+    <style>
+        section {
+            font-family: Verdana;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <header>
+        <h1>Budget Caluculator</h1>
+    </header>
+   
+    <section>
+            <p class="options">Career options - Gross Annual Income</p>
+            <div id="root"></div>
+    </section>
+    <section class="career">
+        <p>What's your annual Income?</p>
+        <input type="text" id="annualIncome">
+        <p id="placeholder"></p>
+    </section>
+    <section class="taxes">
+        <h3>Taxes</h3>
+        <ul>
+            <section class="row">
+                <p>What is your Gross Monthly Income?</p>
+                <input class="mnthly" type="text" id="monthlyIncome">Monthly Income
+            </section>
+            <section class="row">
+                <p>Federal Taxes x 12% =</p>
+                <p class="output" id="fedTax">Fed Taxes</p>
+            </section>
+            <section class="row">
+                <p>State Taxes x 7%</p>
+                <p class="output" id="stateTaxes">State Taxes</p>
+            </section>
+            <section class="row">
+                <p>Social Security x 6.2%</p>
+                <p class="output" id="socSec">Social Security</p>
+            </section>
+            <section class="row">
+                <p>Medicare x 1.45%</p>
+                <p class="output" id="medicare">Medicare</p>
+            </section>
+            <section class="row">
+                <p>State Disability x 1%</p>
+                <p class="output" id="stDisability">State Disability</p>
+            </section>
+            <section class="row">
+                <p>Retired Investment x 5%</p>
+                <p class="output" id="retInv">Retired Investment</p>
+            </section>
+        </ul>
+    </section>
+    <section class="picture">
+        <img src="Screenshot 2024-03-06 144756.png" width="1300px" height="900px">
+    </section>
+    <section class="mainind">
+        <section class="romand">
+            <hr>
+            <p class="settt">Total Deductions</p>
+            <input type="text" id="totalDeductions">
+        </section>
+        <section class="row">
+            <input type="text" id="MonthlyIncomeTwo">
+            <p>-</p>
+            <input type="text" id="totalDeductionsTwo">
+            <p>=</p>
+            <input type="text" id="netMonthly">
+        </section>
+        <section class="monthlyinc">
+            <p>Gross Monthly Income</p>
+            <p>Total deductions</p>
+            <p>Net Monthly Income</p>
+        </section>
+    </section>
+    <!--  -->
+    <section class="expenses">
+        <h1>Expenses - Monthly</h1>
+        <section class="exp">
+            <section class="columnLeft">
+                <section class="housing" id="housingExpenses">
+                    <h3>Housing</h3>
+                    <div class="row">
+                        <section class="column1">
+                            <ul>
+                                <li>Mortgage</li>
+                                <li>Property Tax</li>
+                                <li>Rental</li>
+                                <li>Insurance</li>
+                                <li>Home Maintenance</li>
+                                <li>Utilities</li>
+                            </ul>
+                            <!-- add padding in the css to properly space out the text -->
+                        </section>
+                        <section class="columns">
+                            <section class="column">
+                            <p>$<input type="text" id="mortGage"></p>
+                            <p>$<input type="text" id="propertyTax"></p>
+                            <p>$<input type="text" id="renTal"></p>
+                            <p>$<input type="text" id="insuRance"></p>
+                            <p>$<input type="text" id="homeMain"></p>
+                            <p>$<input type="text" id="utiLities"></p>
+                            </section>
+                        </section>
+                    </div>
+                </section>
+                <section class="loan" id="loanPaymentExpenses">
+                    <h3>Loan Payments </h3>
+                    <div class="row">
+                        <section class="column1">
+                            <ul>
+                                <li>Credit Card</li>
+                                <li>Student Loan</li>
+                                <li>Other Loans & Liabilities</li>
+                            </ul>
+                        </section>
+                        <section class="columns">
+                            <section class="column">
+                            <p>$<input type="text" id="creditCard"></p>
+                            <p>$<input type="text" id="studentLoan"></p>
+                            <p>$<input type="text" id="otherLoans"></p>
+                       </section>
+                        </section>
+                </section>
+                <section class="Healthcare" id="healthcareExpenses">
+                    <h3>Healthcare</h3>
+                    <div class="row">
+                        <section class="column12">
+                            <ul>
+                                <li>Medical Insurance</li>
+                                <li>Medical Spending</li>
+                            </ul>
+                        </section>
+                        <section class="columns">
+                            <section class="column">
+                            <p>$<input type="text" id="medicalInsu"></p>
+                            <p>$<input type="text" id="medicalSpend"></p>
+                        </section>
+                        </section>
+                </section>
+                <section class="Misc" id="miscellaneousExpenses">
+                    <h3>Miscellaneous Expenses </h3>
+                    <div class="row">
+                        <section class="column1">
+                            <ul>
+                                <li>Pet</li>
+                                <li>Gift & Donations</li>
+                                <li>Hobbies & Sports</li>
+                                <li>Entertainment & Tickets</li>
+                                <li>Travel & Vacation</li>
+                                <li>Other Expenses</li>
+                            </ul>
+                        </section>
+                        <section class="columns">
+                            <section class="column">
+                            <p>$<input type="text" id="petTie"></p>
+                            <p>$<input type="text" id="giftDonation"></p>
+                            <p>$<input type="text" id="hobbiesSports"></p>
+                            <p>$<input type="text" id="entertainmentTickets"></p>
+                            <p>$<input type="text" id="travelVacation"></p>
+                            <p>$<input type="text" id="otherExpenses"></p>
+                            </section>
+                        </section>
+                </section>
+            </section>
+            <section class="columnRight">
+                <section class="Transportation" id="transportationExpenses">
+                    <h3>Transportation</h3>
+                    <div class="row">
+                        <section class="column1">
+                            <ul>
+                                <li>Auto Loan</li>
+                                <li>Auto Insurance</li>
+                                <li>Gasoline</li>
+                                <li>Auto Maintenance</li>
+                                <li>Parking/Tolls</li>
+                                <li>Other Transportation Costs</li>
+                            </ul>
+                        </section>
+                        <section class="columns">
+                            <section class="column">
+                                <p>$<input type="text" id="autoLoan"></p>
+                                <p>$<input type="text" id="autoInsurance"></p>
+                                <p>$<input type="text" id="gasoLine"></p>
+                                <p>$<input type="text" id="autoMaintenance"></p>
+                                <p>$<input type="text" id="parkingTolls"></p>
+                                <p>$<input type="text" id="otherTransportationCosts"></p>
+                            </section>
+                        </section>
+                    </div>
+                </section>
+                <section class="Live" id="liveExpenses">
+                    <h3>Live Expenses</h3>
+                    <div class="row">
+                        <section class="column1">
+                            <ul>
+                                <li>Food</li>
+                                <li>Clothing</li>
+                                <li>Meals Out</li>
+                                <li>Household Supplies</li>
+                                <li>Others</li>
+                            </ul>
+                        </section>
+                        <section class="columns">
+                            <section class="column">
+                                <p>$<input type="text" id="foodPayment"></p>
+                                <p>$<input type="text" id="cloThing"></p>
+                                <p>$<input type="text" id="mealsOut"></p>
+                                <p>$<input type="text" id="householdSupplies"></p>
+                                <p>$<input type="text" id="otherPayments"></p>
+                            </section>
+                        </section>
+                </section>
+                <section class="Child" id="childrenEducationExpenses">
+                    <h3>Children & Education </h3>
+                    <div class="row">
+                        <section class="column1">
+                            <ul>
+                                <li>Child & Personal Care</li>
+                                <li>Tuition & Supplies</li>
+                                <li>Child Support Payments</li>
+                                <li>Other Spending</li>
+                            </ul>
+                        </section>
+                        <section class="columns">
+                            <section class="column">
+                                <p>$<input type="text" id="childPersonalCare"></p>
+                                <p>$<input type="text" id="tuitionSupplies"></p>
+                                <p>$<input type="text" id="childSupport"></p>
+                                <p>$<input type="text" id="otherSpending"></p>
+                            </section>
+                        </section>
+                </section>
+                <section class="Savings" id="savingInvestmentExpenses">
+                    <h3>Saving & Investment</h3>
+                    <div class="row">
+                        <section class="column1">
+                            <ul>
+                                <li>College Saving</li>
+                                <li>Investments</li>
+                                <li>Emergency fund & Other</li>
+                            </ul>
+                        </section>
+                        <section class="columns">
+                            <section class="column">
+                                <p>$<input type="text" id="collegeSaving"></p>
+                                <p>$<input type="text" id="investMents"></p>
+                                <p>$<input type="text" id="emergencyfundOther"></p>
+                            </section>
+                        </section>
+                </section>
+                <section>
+                    <button id="calculate">Calculate</button> <p id="endBalance"></p>
+                </section>
+            </section>
+        </section>
+        <section>
+            
+        </section>
+        <section class="bottom">
+            <div>
+                <canvas id="myChart"></canvas>
+            </div>
+           
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+           
+            <script>
+              const ctx = document.getElementById('myChart');
+           
+              new Chart(ctx, {
+                type: 'pie',
+                data: {
+                  labels: ['Blue', 'Red', 'Orange', 'Yellow', 'Green', 'Purple', 'pink','gray'],
+                  datasets: [{
+                    label: '# of Votes',
+                    data: [12, 19, 3, 5, 2, 9, 4],
+                    borderWidth: 1
+                  }]
+                },
+                options: {
+                  scales: {
+                    y: {
+                      beginAtZero: true
+                    }
+                  }
+                }
+              });
+          </script>
+            </div>            </div>
+            <div class="foorte">
+                <section class="hs">
+                    <h4><span class="red"></span> Housing</h4>
+                </section>
+                <section class="lnpm">
+                    <h4><span class="green"></span>Loan Payments</h4>
+                </section>
+                <section class="heal">
+                    <h4><span class="orange"></span>Healthcare</h4>
+                </section>
+                <section class="miscell">
+                    <h4> <span class="purple"></span> Miscellaneous Expenses</h4>
+                </section>
+                <section class="transpo">
+                    <h4><span class="yellow"></span>Transportation</h4>
+                </section>
+                <section class="liveex">
+                    <h4><span class="pink"></span>Live Expenses</h4>
+                </section>
+                <section class="childedu">
+                    <h4><span class="blue"></span>Children and Education</h4>
+                </section>
+                <section class="savinginv">
+                    <h4><span class="gray"></span>Saving & Investment</h4>
+                </section>
+            </div>
+        </section>
+    </section>
+</body>
+
+</html>

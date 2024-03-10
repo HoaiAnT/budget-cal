@@ -1,0 +1,260 @@
+body {
+    background-color:white;
+    margin:0;
+}
+
+header {
+    justify-content: center;
+    background-color:darkblue;
+    color:white;
+    align-content:stretch;
+}
+.h1{
+    margin-top:0;
+}
+
+.row {
+    display: flex;
+
+}
+.picture{
+    position:absolute;
+    top:1200px;
+    left:45%;
+}
+
+.output {
+    background-color: white;
+    border-style: solid;
+    border-width: 2px;
+    width: 20%;
+    padding: 3px;
+    margin: 10px;
+}
+
+input {
+    display: flex;
+    align-self: center;
+    width: 20%;
+    height: 10%;
+    margin-left: 5%;
+    margin-right: 5%
+}
+
+.deductions {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 15%;
+}
+
+.column>p {
+    display: flex;
+    justify-content: space-around;
+}
+
+.column>p>input {
+    width: 80%;
+}
+
+li {
+    font-size: 18px;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+}
+.column1 li{
+padding-bottom: 40px;
+}
+.column12 li{
+    padding-bottom: 45px;
+}
+header h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 75px;
+    margin-top: -10px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+#root{
+    display:FLEX;
+        justify-content:space-between;
+        flex-wrap:wrap;
+      flex-direction:row;
+}
+.something{
+    border-style:solid;
+    border-radius:5px;
+    padding:10px;
+    margin:10px;
+    
+}
+h2{
+    font-size: 55px;
+}
+li{
+    font-size: 50px;
+}
+
+.column p{
+    padding-bottom:45px;
+    padding-left:20px;
+}
+.column input{
+    font-size: 25px;
+}
+button{
+    background-color:white;
+    color: black;
+    font-size: 50px;
+    display:flex;
+    justify-content: center;
+    padding:20px;
+    border-style: solid;
+    border-radius: 10px;
+    margin-left:-350px;
+}
+h3{
+    font-size:45px;
+}
+button:hover{
+    background-color: darkblue;
+    color:white;
+}
+.column > p{
+    font-size: 25px;
+}
+.Transportation{
+    margin-top: 125px;
+}
+.expenses h1{
+    font-size: 60px;
+}
+
+tr {
+    font-size: 25px;
+}
+
+
+.career p{
+    font-size: 25px;
+}
+
+.career input{
+    font-size: 25px;
+}
+.exp{
+    display:flex;
+    justify-content: space-between;
+}
+
+.options{
+    font-size: 35px;
+    text-decoration: underline;
+    margin-left: 50px;
+}
+
+.career {
+    margin-left: 150px;
+    margin-top: 50px;
+}
+.taxes h3 {
+font-size: 35px;
+text-decoration: underline;
+margin-left: 50px;
+}
+.taxes p {
+    font-size: 25px;
+}
+.romand p {
+    font-size: 30px;
+    margin-left: 90px;
+}
+.monthlyinc {
+    font-size: 30px;
+     display: flex;
+justify-content: space-around;
+margin-left: -70px;
+}
+.mainind input {
+font-size: 30px;
+}
+.romand input {
+margin-bottom: 20px;
+}
+.mnthly{
+    padding:20px;
+    margin-left:3px;
+}
+h4{
+    font-size: 25px;
+    margin:10px;
+}
+.foorte{
+    display:flex;
+    flex-direction: column;
+    margin-left:1050px;
+}
+.red{
+    background-color:red;
+    padding:5px;
+    padding-left:35px;
+    margin-right:30px;
+}
+.green{
+    background-color:green;
+    padding:5px;
+    padding-left:35px;
+    margin-right:30px;
+}
+.orange{
+    background-color:rgb(246, 136, 2);
+    padding:5px;
+    padding-left:35px;
+    margin-right:30px;
+}
+.purple{
+    background-color:purple;
+    padding:5px;
+    padding-left:35px;
+    margin-right:30px;
+}
+.yellow{
+    background-color:aquamarine;
+    padding:5px;
+    padding-left:35px;
+    margin-right:30px;
+}
+.pink{
+    background-color:pink;
+    padding:5px;
+    padding-left:35px;
+    margin-right:30px;
+}
+.blue{
+    background-color:gray;
+    padding:5px;
+    padding-left:35px;
+    margin-right:30px;
+}
+.gray{
+    background-color:blue;
+    padding:5px;
+    padding-left:35px;
+    margin-right:30px;
+}
+#endBalance{
+    font-size:35px;
+    margin-left:-400px;
+}
+
+#myChart{
+    font-size: 30%;
+}
+.bottom{
+    display:flex;
+    justify-content:flex-start;
+    width:1932px;   
+}
