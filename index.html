@@ -26,48 +26,50 @@
    
     <section>
             <p class="options">Career options - Gross Annual Income</p>
-            <div id="root"></div>
+            <section id="root"></section>
     </section>
     <section class="career">
         <p>What's your annual Income?</p>
         <input type="text" id="annualIncome">
         <p id="placeholder"></p>
     </section>
-    <section class="taxes">
-        <h3>Taxes</h3>
-        <ul>
-            <section class="row">
-                <p>What is your Gross Monthly Income?</p>
-                <input class="mnthly" type="text" id="monthlyIncome">Monthly Income
-            </section>
-            <section class="row">
-                <p>Federal Taxes x 12% =</p>
-                <p class="output" id="fedTax">$</p>
-            </section>
-            <section class="row">
-                <p>State Taxes x 7%</p>
-                <p class="output" id="stateTaxes">$</p>
-            </section>
-            <section class="row">
-                <p>Social Security x 6.2%</p>
-                <p class="output" id="socSec">$</p>
-            </section>
-            <section class="row">
-                <p>Medicare x 1.45%</p>
-                <p class="output" id="medicare">$</p>
-            </section>
-            <section class="row">
-                <p>State Disability x 1%</p>
-                <p class="output" id="stDisability">$</p>
-            </section>
-            <section class="row">
-                <p>Retired Investment x 5%</p>
-                <p class="output" id="retInv">$</p>
-            </section>
-        </ul>
-    </section>
-    <section class="picture">
-        <img src="Screenshot 2024-03-06 144756.png" width="1300px" height="900px">
+    <section class="taxpic">
+        <section class="taxes">
+            <h3>Taxes</h3>
+            <ul>
+                <section class="row">
+                    <p>What is your Gross Monthly Income?</p>
+                    <input class="mnthly" type="text" id="monthlyIncome">
+                </section>
+                <section class="row">
+                    <p>Federal Taxes x 12% =</p>
+                    <p class="output" id="fedTax">$</p>
+                </section>
+                <section class="row">
+                    <p>State Taxes x 7%</p>
+                    <p class="output" id="stateTaxes">$</p>
+                </section>
+                <section class="row">
+                    <p>Social Security x 6.2%</p>
+                    <p class="output" id="socSec">$</p>
+                </section>
+                <section class="row">
+                    <p>Medicare x 1.45%</p>
+                    <p class="output" id="medicare">$</p>
+                </section>
+                <section class="row">
+                    <p>State Disability x 1%</p>
+                    <p class="output" id="stDisability">$</p>
+                </section>
+                <section class="row">
+                    <p>Retired Investment x 5%</p>
+                    <p class="output" id="retInv">$</p>
+                </section>
+            </ul>
+        </section>
+        <section class="picture">
+            <img src="Screenshot 2024-03-06 144756.png" width="1300px" height="900px">
+        </section>
     </section>
     <section class="mainind">
         <section class="romand">
@@ -90,7 +92,7 @@
     </section>
     <!--  -->
     <section class="expenses">
-        <h1>Expenses - Monthly</h1>
+        <h1>Expenses - Monthly:</h1>
         <section class="exp">
             <section class="columnLeft">
                 <section class="housing" id="housingExpenses">
@@ -273,9 +275,9 @@
             
         </section>
         <section class="bottom">
-            <div>
+            
                 <canvas id="myChart"></canvas>
-            </div>
+            
            
             <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
            
@@ -304,28 +306,28 @@
             </div>            </div>
             <div class="foorte">
                 <section class="hs">
-                    <h4><span class="red"></span> Housing</h4>
+                    <p><span class="red"></span> Housing</h4>
                 </section>
                 <section class="lnpm">
-                    <h4><span class="green"></span>Loan Payments</h4>
+                    <p><span class="green"></span>Loan Payments</h4>
                 </section>
                 <section class="heal">
-                    <h4><span class="orange"></span>Healthcare</h4>
+                    <p><span class="orange"></span>Healthcare</h4>
                 </section>
                 <section class="miscell">
-                    <h4> <span class="purple"></span> Miscellaneous Expenses</h4>
+                    <p> <span class="purple"></span> Miscellaneous Expenses</h4>
                 </section>
                 <section class="transpo">
-                    <h4><span class="yellow"></span>Transportation</h4>
+                    <p><span class="yellow"></span>Transportation</h4>
                 </section>
                 <section class="liveex">
-                    <h4><span class="pink"></span>Live Expenses</h4>
+                    <p><span class="pink"></span>Live Expenses</h4>
                 </section>
                 <section class="childedu">
-                    <h4><span class="blue"></span>Children and Education</h4>
+                    <p><span class="blue"></span>Children and Education</h4>
                 </section>
                 <section class="savinginv">
-                    <h4><span class="gray"></span>Saving & Investment</h4>
+                    <p><span class="gray"></span>Saving & Investment</h4>
                 </section>
             </div>
         </section>
